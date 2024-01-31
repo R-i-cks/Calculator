@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odin Calculator</title>
+    <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+    <div class="header">Welcome to my calculator app</div>
+    <div class="content">
+        <div class="calculator">
+                <div class="calculator-top">
+                    <form> 
+                        <input type="text" id="numDisplay" readonly/>
+                    </form>
+                    <button class="button" id="clear" onclick="Reset()" >C</button>
+                </div>
+                <div class="calculator-body">
+                    <div class="numbers">
+                        <button class="button" id="b1" onclick="insertN(1)" >1</button>
+                        <button class="button" id="b2" onclick="insertN(2)">2</button>
+                        <button class="button" id="b3" onclick="insertN(3)">3</button>
+                        <button class="button" id="b4" onclick="insertN(4)">4</button>
+                        <button class="button" id="b5" onclick="insertN(5)">5</button>
+                        <button class="button" id="b6" onclick="insertN(6)">6</button>
+                        <button class="button" id="b7" onclick="insertN(7)">7</button>
+                        <button class="button" id="b8" onclick="insertN(8)">8</button>
+                        <button class="button" id="b9" onclick="insertN(9)">9</button>
+                        <button class="button" id="b0" onclick="insertN(0)">0</button>
+                        <button class="button" id="point" onclick="insertComma()">.</button>
+                    </div>
+                    <div class="operators">
+                        <button class="button" id="sum" onclick="defineOp('+')" >+</button>
+                        <button class="button" id="sub" onclick="defineOp('-')">-</button>
+                        <button class="button" id="mult" onclick="defineOp('x')">x</button>
+                        <button class="button" id="divi" onclick="defineOp('/')">/</button>
+                        <button class="button" id="equal" onclick="makeOp()">=</button>
+                    </div> 
+                </div>    
+        </div>            
+    </div>
+    <div class="footnote">Developed with care by Ricks</div>
+    <script src="calculator.js"></script>
+</body>
+</html>

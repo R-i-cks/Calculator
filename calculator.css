@@ -7,14 +7,17 @@ body {
 }
 
 .header {
-    background-color: rebeccapurple;
+    background-color: #432e66;
+
+
     color: white;
     padding: 20px;
 }
 
 .calculator{
-    background-color:chocolate;
+    background-color:#353935;
     padding:10px;
+    border-radius: 15px;
 }
 .content {
     flex-grow: 1;
@@ -22,43 +25,77 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    padding: 20px;
+    padding: 10px;
 }
 #numDisplay {
-    width: 90%;
+    flex:1;
+    margin: 0;
     padding: 10px;
     font-size: 1.2em;
     margin-bottom: 20px;
     text-align: right;
+    border-radius: 12px;
 }
 
 .calculator-top{
     display: flex;
     flex-direction: row;
 }
-.calculator-body {
+.buttons {
+    margin: 0;
+    padding:0;
     display: flex;
-    flex-direction: row;
-    max-width: 280px;
+    flex-direction: column;
     flex-wrap: nowrap;
+    
 }
 
-.numbers, .operators {
+
+
+.number, .operation {
+    margin: 2px;
+    padding: 10px 25px;
+    font-size: 1.5em;
+    border-radius: 10px;
+}
+
+.operation{
+    background-color: #f57e23;
+}
+#b0{
+    padding: 10px 62px;
+}
+
+#point{
+    padding: 10px 29px;
+}
+
+#sub{
+    padding: 10px 29px;
+}
+
+#mult{
+    padding: 10px 27px;
+}
+
+
+
+.uprow{
     display: flex;
-    flex-wrap: wrap;
+    flex:1;
+    justify-content: stretch;
+}
+#clear{
+    display: flex;
+    flex:2;
     justify-content: center;
 }
 
-.button {
-    margin: 5px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-}
-#b0{
-    padding: 10px 53px;
+#divi{
+    padding: 10px 29px;
 }
 .footnote {
-    background-color: aqua;
+    background-color: #b0a0dc;
     text-align: center;
     padding: 10px;
     margin-top: auto;

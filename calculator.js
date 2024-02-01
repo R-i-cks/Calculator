@@ -1,7 +1,7 @@
 let nDis1 = 0;
 let nDis2 = 0;
 let operation = "";
-
+let change = false;
 
 
 
@@ -60,6 +60,10 @@ const factorial = function(a) {
 
 
 const insertN = function(n){
+  if(change)
+  { clearDisplay();
+    change=false;
+  }
   valDis = document.getElementById('numDisplay').value;
   if (valDis.includes("Error") || valDis.includes("NaN")){
     Reset();
@@ -68,13 +72,14 @@ const insertN = function(n){
 }
 
 const defineOp = function(op){
+  change = true;
+  if (operation!=""){makeOp();}
   if (document.getElementById('numDisplay').value !==""){
     nDis1 = document.getElementById('numDisplay').value;
   }else{
     nDis1 = 0;
   }
   operation = op;
-  document.getElementById('numDisplay').value = "";
 }
 
 
@@ -87,7 +92,8 @@ const insertComma = function(){
 
  const makeOp = function(){
   if (operation != "" ){
-    nDis2 = document.getElementById('numDisplay').value;
+    if(change){nDis2=""}
+    else{nDis2 = document.getElementById('numDisplay').value;}
     if (nDis2==""){
       if(operation=="/" || operation=="x"){nDis2=1;}
       else{nDis2=0;}
@@ -110,4 +116,10 @@ const Reset = function(){
   nDis1="";
   nDis2="";
   operation="";
+}
+
+const TakeOne = function(){
+  let ini = document.getElementById('numDisplay').value;
+  ini = ini.slice(0,-1);
+  document.getElementById('numDisplay').value = ini;
 }
